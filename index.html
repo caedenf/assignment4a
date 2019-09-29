@@ -36,6 +36,9 @@
       }
       return array;
     }
+    function submittedGuesses() {
+     window.alert("Got here"); 
+    }
   </script>
 </head>
 <body>
@@ -47,5 +50,12 @@
     document.getElementById("unsorted").innerHTML = unsortedNums;  
     document.getElementById("sorted").innerHTML = sortedNums;
   </script>
+  <form>
+    Enter 5 numbers separated by spaces:
+    <input type="text" name="guessedNums">
+    Enter lucky ball number:
+    <input type="text" name="guessedLucky">
+  </form>
+  <button type="button" onclick="submittedGuesses()">Submit guesses</button>
 </body>
 </html>
