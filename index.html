@@ -69,13 +69,12 @@
         window.alert("No winning numbers!"); 
       }
     }
-function findMatches(array1, array2) {
+function findMatches(array1, array2) { //FIX THIS, IT REPEATS NUMBERS ONLY FOUND ONCE IN THE LOTTERY NUMBER
     var matches = [];
     for (var i = 0; i < array1.length; i++) {
         for (var j = 0; j < array2.length; j++) {
             if (array1[i] == array2[j]) {
               matches.push(array1[i]);
-              break;
             }
         }
     }
