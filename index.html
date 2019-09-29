@@ -10,17 +10,16 @@
     var num5 = Math.floor(Math.random() * (48 - 1 + 1)) + 1);
     var luckyBall = Math.floor((Math.random() * (18 - 1 + 1)) + 1
     var balls = [num1, num2, num3, num4, num5];
+    var unsortedNums = "";
+    for (var i = 0; i < balls.length; i++) {
+      unsortedNums += balls[i];
+    }
+    unsortedNums += luckyBall;
+    document.getElementById("unsorted").innerHTML = unsortedNums;   
   </script>
 </head>
 <body>
   <h4>Unsorted numbers:</h4>
   <p id="unsorted"></p>
-  <script>
-    for (var i = 0; i < balls.length; i++) {
-      document.write(balls[i]);
-      document.getElementById("unsorted").innerHTML += balls[i];
-    }
-    document.getElementById("unsorted").innerHTML += luckyBall;                               
-  </script>
 </body>
 </html>
