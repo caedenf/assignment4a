@@ -42,13 +42,9 @@
      var guessArray = allGuesses.split(" ");
      var sharedNums = findMatches(guessArray, balls);
      var numRight = sharedNums.length;
-      window.alert(numRight);
      outputResults(numRight, luckyGuess);
     }
     function outputResults(numMatched, lGuess) {
-      window.alert(numMatched);
-      window.alert(lGuess);
-      /*
       if (numMatched == 5 && lGuess == luckyBall) {
         window.alert("All matched! $7,000 a WEEK for LIFE!");
       } else if (numMatched == 5) {
@@ -71,7 +67,6 @@
         window.alert("Only lucky ball matched! $4!"); 
       } else {
         window.alert("No winning numbers!"); 
-        */
       }
 function findMatches(array1, array2) {
     var matches = [];
