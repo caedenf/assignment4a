@@ -2,9 +2,7 @@
 <html>
 <head>
   <title>Quick Pick</title>
-</head>
-<body>
-    <script>
+  <script>
     var num1 = Math.floor((Math.random() * 48) + 1);
     window.alert(num1);
     window.alert("help");
@@ -18,10 +16,14 @@
     for (var i = 0; i < balls.length; i++) {
       unsortedNums += balls[i];
     }
-    unsortedNums += luckyBall;
-    document.getElementById("unsorted").innerHTML = unsortedNums;   
+    unsortedNums += luckyBall; 
   </script>
+</head>
+<body>
   <h4>Unsorted numbers:</h4>
   <p id="unsorted"></p>
+  <script>
+    document.getElementById("unsorted").innerHTML = unsortedNums;  
+  </script>
 </body>
 </html>
