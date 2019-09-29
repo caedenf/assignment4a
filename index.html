@@ -16,13 +16,34 @@
       unsortedNums += "-";
     }
     unsortedNums += luckyBall; 
+    bubbleSort(balls);
+    var sortedNums = "";
+    for (var i = 0; i < balls.length; i++) {
+      sortedNums += balls[i];
+      sortedNums += "-";
+    }
+    sortedNums += luckyBall; 
+    function bubbleSort(array) {
+     var length = array.length;
+     for (var i = 0; i < length; i++) {
+       for (var j = 0; j < (length - i - 1); j++) {
+         if (items[j] > items[j + 1]) {
+         var temp = items[j];
+         items[j] = items[j + 1];
+         items[j + 1] = temp;
+      }
+    }
+  }
+}
   </script>
 </head>
 <body>
   <h4>Unsorted numbers:</h4>
   <p id="unsorted"></p>
+  <h4>Sorted numbers:</h4>
+  <p id="sorted"></p>
   <script>
-    document.getElementById("unsorted").innerHTML = unsortedNums;  
+    document.getElementById("sorted").innerHTML = sortedNums;  
   </script>
 </body>
 </html>
