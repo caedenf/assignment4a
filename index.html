@@ -42,7 +42,8 @@
      var guessArray = allGuesses.split(" ");
      var sharedNums = findMatches(guessArray, balls);
      var numRight = sharedNums.length;
-     //outputResults(numRight, luckyGuess);
+      window.alert(numRight);
+     outputResults(numRight, luckyGuess);
     }
 function findMatches(array1, array2) {
     var matches = [];
