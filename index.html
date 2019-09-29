@@ -46,8 +46,8 @@
     function findMatches(array) {
     var matches = [];
     for (var i in balls) {  
-        window.alert(balls[i]);
         if(array.indexOf(balls[i]) > -1){
+            window.alert("match! " + balls[i]);
             matches += balls[i];
         }
     }
