@@ -41,7 +41,8 @@
      var luckyGuess = document.forms[0].elements[1].value; 
      var guessArray = allGuesses.split(" ");
      var sharedNums = findMatches(guessArray, balls);
-     window.alert(sharedNums);
+     var numRight = sharedNums.length;
+     outputResults(numRight, luckyGuess);
     }
 function findMatches(array1, array2) {
     var matches = [];
@@ -54,6 +55,30 @@ function findMatches(array1, array2) {
     }
     return matches;
 }
+    function outputResults(numMatched, lGuess) {
+      if (numMatched == 5 && lGuess == luckyBall) {
+        window.alert("All matched! $7,000 a WEEK for LIFE!");
+      } else if (numMatched == 5) {
+        window.alert("All except lucky ball matched! $25,000 a YEAR for LIFE!"); 
+      } else if (numMatched == 4 && lGuess == luckyBall) {
+        window.alert("Four balls and lucky ball matched! $5,000!"); 
+      } else if (numMatched == 4) {
+        window.alert("Four balls matched! $200!");
+      } else if (numMatched == 3 && lGuess == luckyBall) {
+        window.alert("Three balls and lucky ball matched! $150!");
+      } else if (numMatched == 3) {
+        window.alert("Three balls matched! $20!");
+      } else if (numMatched == 2 && lGuess == luckyGuess) {
+        window.alert("Two balls and lucky ball matched! $25!"); 
+      } else if (numMatched == 2) {
+        window.alert("Two balls matched! $3!"); 
+      } else if (numMatched == 1 && lGuess == luckyBall) {
+        window.alert("One ball and lucky ball matched! $6!"); 
+      } else if (lGuess == luckyBall) {
+        window.alert("Only lucky ball matched! $4!"); 
+      } else {
+        window.alert("No winning numbers!"); 
+      }
   </script>
 </head>
 <body>
