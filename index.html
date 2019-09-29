@@ -16,10 +16,10 @@
       unsortedNums += "-";
     }
     unsortedNums += luckyBall; 
-    bubbleSort(balls);
+    var sortedBalls = bubbleSort(balls);
     var sortedNums = "";
-    for (var i = 0; i < balls.length; i++) {
-      sortedNums += balls[i];
+    for (var i = 0; i < sortedBalls.length; i++) {
+      sortedNums += sortedBalls[i];
       sortedNums += "-";
     }
     sortedNums += luckyBall; 
@@ -34,6 +34,7 @@
          }
        }
       }
+      return array;
     }
   </script>
 </head>
