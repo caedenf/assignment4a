@@ -38,9 +38,10 @@
     }
     function submittedGuesses() {
      var allGuesses = document.forms[0].elements[0].value; 
-     window.alert(allGuesses);
      var luckyGuess = document.forms[0].elements[1].value; 
-     window.alert(luckyGuess);
+     var guessArray = allGuesses.split(" ");
+     guessArray.filter(value => sortedNums.includes(value));
+     window.alert(guessArray);
     }
   </script>
 </head>
