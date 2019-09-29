@@ -37,7 +37,8 @@
       return array;
     }
     function submittedGuesses() {
-     window.alert("Got here"); 
+     var num1 = document.forms[0].elements[0].value; 
+     window.alert(num1);
     }
   </script>
 </head>
@@ -52,7 +53,7 @@
   </script>
   <form>
     Enter 5 numbers separated by spaces:
-    <input type="text" name="guessedNums">
+    <input type="text" name="guessedNums"><br>
     Enter lucky ball number:
     <input type="text" name="guessedLucky">
   </form>
