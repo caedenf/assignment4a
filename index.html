@@ -40,10 +40,18 @@
      var allGuesses = document.forms[0].elements[0].value; 
      var luckyGuess = document.forms[0].elements[1].value; 
      var guessArray = allGuesses.split(" ");
-      window.alert(balls);
-     var sharedNums = guessArray.filter(element => balls.includes(element));
+     var sharedNums = findMatches(guessArray);
      window.alert(sharedNums);
     }
+    function findMatches(array) {
+    var matches = [];
+    for(var i in balls) {   
+        if(array.indexOf(balls[i]) > -1){
+            matches += balls[i];
+        }
+    }
+    return ret;
+  } 
   </script>
 </head>
 <body>
