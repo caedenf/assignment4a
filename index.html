@@ -75,7 +75,7 @@ function findMatches(array1, array2) { //FIX THIS, IT REPEATS NUMBERS ONLY FOUND
         for (var j = 0; j < array2.length; j++) {
             if (array1[i] == array2[j]) {
               matches.push(array1[i]);
-              j = -1; //breaks out of loop to avoid duplicates
+              j = array2.length; //breaks out of loop to avoid duplicates
             }
         }
     }
