@@ -71,12 +71,11 @@
     }
 function findMatches(array1, array2) { //FIX THIS, IT REPEATS NUMBERS ONLY FOUND ONCE IN THE LOTTERY NUMBER
     var matches = [];
-    var breakLoop = false;
-    for (var i = 0; i < array1.length; i++) {
-        for (var j = 0; j < array2.length; j++ && breakLoop == false) {
-            if (array1[i] == array2[j]) {
-              matches.push(array1[i]);
-              breakLoop = true; //breaks out of loop to avoid duplicates
+    for (var i = 0; i < array2.length; i++) {
+        for (var j = 0; j < array1.length; j++) {
+            if (array2[i] == array1[j]) {
+              matches.push(array2[i]);
+              j = -1; //breaks out of loop to avoid duplicates
             }
         }
     }
